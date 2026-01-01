@@ -1,5 +1,5 @@
 import random
-from typing import List, Tuple, Optional
+from typing import Optional, Tuple
 
 import pygame
 from pygame.locals import KEYDOWN, K_DOWN, K_ESCAPE, K_LEFT, K_RIGHT, K_UP, QUIT
@@ -101,8 +101,8 @@ class Snake(GameObject):
         if self.next_direction:
             opposite_x = self.direction[0] * -1
             opposite_y = self.direction[1] * -1
-            if not (self.next_direction[0] == opposite_x and
-                    self.next_direction[1] == opposite_y):
+            if not (self.next_direction[0] == opposite_x
+                    and self.next_direction[1] == opposite_y):
                 self.direction = self.next_direction
             self.next_direction = None
 
@@ -236,7 +236,8 @@ def main() -> None:
         apple.draw(screen)
         snake.draw(screen)
 
-        score_text = font.render(f'Длина: {snake.length}', True, (255, 255, 255))
+        score_text = font.render(
+            f'Длина: {snake.length}', True, (255, 255, 255))
         screen.blit(score_text, (10, 10))
 
         instructions_text = 'Управление: стрелки, ESC - выход'
