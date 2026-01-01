@@ -2,7 +2,15 @@ import random
 from typing import Optional, Tuple
 
 import pygame
-from pygame.locals import KEYDOWN, K_DOWN, K_ESCAPE, K_LEFT, K_RIGHT, K_UP, QUIT
+from pygame.locals import (
+    KEYDOWN,
+    K_DOWN,
+    K_ESCAPE,
+    K_LEFT,
+    K_RIGHT,
+    K_UP,
+    QUIT,
+)
 
 # Константы игры
 SCREEN_WIDTH = 640
@@ -101,8 +109,8 @@ class Snake(GameObject):
         if self.next_direction:
             opposite_x = self.direction[0] * -1
             opposite_y = self.direction[1] * -1
-            if not (self.next_direction[0] == opposite_x
-                    and self.next_direction[1] == opposite_y):
+            if not (self.next_direction[0] == opposite_x and
+                    self.next_direction[1] == opposite_y):
                 self.direction = self.next_direction
             self.next_direction = None
 
