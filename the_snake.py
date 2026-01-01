@@ -2,13 +2,7 @@ import random
 from typing import Optional, Tuple
 
 import pygame
-from pygame.locals import KEYDOWN
-from pygame.locals import K_DOWN
-from pygame.locals import K_ESCAPE
-from pygame.locals import K_LEFT
-from pygame.locals import K_RIGHT
-from pygame.locals import K_UP
-from pygame.locals import QUIT
+from pygame.locals import KEYDOWN, K_DOWN, K_ESCAPE, K_LEFT, K_RIGHT, K_UP, QUIT
 
 # Константы игры
 SCREEN_WIDTH = 640
